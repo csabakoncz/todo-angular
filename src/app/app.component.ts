@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
   <div>
+    <h1>App title: {{title}}</h1>
     <AddTodo></AddTodo>
     <VisibleTodoList></VisibleTodoList>
     <Footer></Footer>
@@ -12,5 +13,9 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
-  title = 'angular-ride';
+  _title = 'angular-ride';
+
+  get title(){
+    return this._title
+  }
 }
