@@ -2,8 +2,14 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+  <div>
+    <AddTodo></AddTodo>
+    <VisibleTodoList></VisibleTodoList>
+    <Footer></Footer>
+  </div>
+  `,
+  styles: []
 })
 export class AppComponent {
   title = 'angular-ride';
