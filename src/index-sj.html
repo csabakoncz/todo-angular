@@ -1,21 +1,25 @@
 <html>
 
 <body>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.21.3/system.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.21.6/system.src.js'></script>
+    <script src="https://unpkg.com/core-js@2.5.7/client/shim.min.js"></script>
+    <!-- <script src='../node_modules/systemjs/dist/system.js'></script> -->
     <script src='system-config.js'></script>
     <script>
         var c = window._systemConfig;
         SystemJS.config(c);
 
-        SystemJS.import('rxjs/operators').then(m => {
-                console.log('rxjs.operators is ', m)
-                // SystemJS.import('app/app').then(
-                //     app=>console.log('app loaded', app)
-                // )
-            }
-        );
-        SystemJS.import('redux').then(r=>console.log('redux',r))
+        boot();
+
+        async function boot(){
+            // console.log(await System.import('../node_modules/core-js/es/reflect/index'))
+            console.log(await SystemJS.import('zone'))
+            console.log(await SystemJS.import('rxjs/operators'))
+            console.log(await SystemJS.import('redux'))
+        }
     </script>
+
+<app-root></app-root>
 </body>
 
 </html>

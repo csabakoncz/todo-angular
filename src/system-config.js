@@ -10,6 +10,9 @@ window._systemConfig = {
     packages: {
         app: {
             "defaultExtension": "ts",
+        },
+        '../node_modules/core-js': {
+            "defaultExtension": "js",
         }
     },
     map: {
@@ -23,6 +26,7 @@ window._systemConfig = {
         "rxjs": "../node_modules/rxjs/bundles/rxjs.umd.js",
         "rxjs/operators": "rxjs-operators-shim.js",
         "symbol-observable": "../node_modules/symbol-observable/lib/index.js",
+        "zone": "../node_modules/zone.js/dist/zone.js",
         ts: "../node_modules/plugin-typescript/lib/plugin.js",
         typescript: "../node_modules/typescript/lib/typescript.js",
         'text': 'https://cdn.jsdelivr.net/npm/systemjs-plugin-text@0.0.11/text.js'
