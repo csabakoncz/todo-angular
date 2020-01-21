@@ -8,9 +8,6 @@ export enum AppAction {
   TODO_TOGGLE
 }
 
-interface HasTitle{
-  title: string
-}
 const state0: AppState={
   title: 'AAA',
   todos: [],
