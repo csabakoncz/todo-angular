@@ -10,7 +10,20 @@ export enum AppAction {
 
 const state0: AppState={
   title: 'AAA',
-  todos: [],
+  todos: [
+    {
+      text: 'first item',
+      completed: false
+    },
+    {
+      text: 'second  (completed)  item',
+      completed: true
+    },
+    {
+      text: 'third item',
+      completed: false
+    }
+  ],
   visibilityFilter: VisibilityFilter.All
 }
 
