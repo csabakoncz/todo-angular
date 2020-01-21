@@ -31,6 +31,11 @@ export class VisibleTodoListComponent implements OnInit {
   }
 
   ngOnInit() {
+    function setBorder(){
+      $('todo').each((i,f)=>{f.children[0].style['border']='dotted'})
+    }
+    setTimeout(setBorder, 3000)
   }
 
 }
+declare var $: any;
