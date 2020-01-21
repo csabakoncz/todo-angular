@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="." />
+  <title>Angular 8 template</title>
+  <style>
+        .completed-todo {
+          text-decoration: line-through;
+        }
+    </style>
+
+</head>
+
+<body>
+        <app-root></app-root>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/core-js@2.5.7/client/shim.min.js"></script>
+        <script src="https://unpkg.com/zone.js@0.8.26?main=browser"></script>
+        <script src="https://unpkg.com/reflect-metadata@0.1.8"></script>
+        <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+
+        <script src="system-config2.js"></script>
+        <script>
+              // var c = window._systemConfig;
+              // SystemJS.config(c);
+
+              boot();
+
+              async function boot(){
+                  // console.log(await System.import('../node_modules/core-js/es/reflect/index'))
+                  // console.log(await SystemJS.import('zone'))
+                  // console.log(await SystemJS.import('rxjs/operators'))
+                  console.log(await SystemJS.import('app/app'))
+              }
+          </script>
+
+</body>
+
+</html>
