@@ -1,6 +1,13 @@
 <html>
-
+<head>
+  <style>
+        .completed-todo {
+          text-decoration: line-through;
+        }
+    </style>
+</head>
 <body>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.21.6/system.src.js'></script>
     <script src="https://unpkg.com/core-js@2.5.7/client/shim.min.js"></script>
     <!-- <script src='../node_modules/systemjs/dist/system.js'></script> -->
@@ -16,6 +23,7 @@
             console.log(await SystemJS.import('zone'))
             console.log(await SystemJS.import('rxjs/operators'))
             console.log(await SystemJS.import('redux'))
+            console.log(await SystemJS.import('app/app'))
         }
     </script>
 

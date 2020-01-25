@@ -31,5 +31,9 @@ window._systemConfig = {
         typescript: "../node_modules/typescript/lib/typescript.js",
         'text': 'https://cdn.jsdelivr.net/npm/systemjs-plugin-text@0.0.11/text.js'
     },
-    transpiler: 'ts'
+    transpiler: 'ts',
+    typescriptOptions: {
+      emitDecoratorMetadata: true,
+      experimentalDecorators: true
+    }
 };
