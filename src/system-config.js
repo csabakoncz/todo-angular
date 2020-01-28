@@ -13,18 +13,49 @@ window._systemConfig = {
         },
         '../node_modules/core-js': {
             "defaultExtension": "js",
+        },
+        '@angular/core': {
+            'defaultExtension': 'js',
+            'main': 'core'
+        },
+        '@angular/compiler': {
+            'defaultExtension': 'js',
+            'main': 'compiler'
+        },
+        '@angular/platform-browser': {
+            'defaultExtension': 'js',
+            'main': 'platform-browser'
+        },
+        '@angular/platform-browser-dynamic': {
+            'defaultExtension': 'js',
+            'main': 'platform-browser-dynamic'
+        },
+        '@angular/common': {
+            'defaultExtension': 'js',
+            'main': 'common'
+        },
+        '@angular/forms': {
+            'defaultExtension': 'js',
+            'main': 'forms'
+        },
+        rxjs: {
+            main: 'index.js',
+            defaultExtension: 'js'
+        },
+        "rxjs/operators": {
+            main: 'index.js',
+            defaultExtension: 'js'
         }
     },
     map: {
-        "@angular/platform-browser-dynamic": "../node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js",
-        "@angular/platform-browser": "../node_modules/@angular/platform-browser/bundles/platform-browser.umd.js",
-        "@angular/compiler": "../node_modules/@angular/compiler/bundles/compiler.umd.js",
-        "@angular/core": "../node_modules/@angular/core/bundles/core.umd.js",
-        "@angular/common": "../node_modules/@angular/common/bundles/common.umd.js",
-        "@angular/forms": "../node_modules/@angular/forms/bundles/forms.umd.js",
+        "@angular/platform-browser-dynamic": "../node_modules/@angular/platform-browser-dynamic/esm2015",
+        "@angular/platform-browser": "../node_modules/@angular/platform-browser/esm2015",
+        "@angular/compiler": "../node_modules/@angular/compiler/esm2015",
+        "@angular/core": "../node_modules/@angular/core/esm2015",
+        "@angular/common": "../node_modules/@angular/common/esm2015",
+        "@angular/forms": "../node_modules/@angular/forms/esm2015",
         "redux": "../node_modules/redux/dist/redux.js",
-        "rxjs": "../node_modules/rxjs/bundles/rxjs.umd.js",
-        "rxjs/operators": "rxjs-operators-shim.js",
+        "rxjs": "../node_modules/rxjs/_esm2015",
         "symbol-observable": "../node_modules/symbol-observable/lib/index.js",
         "zone": "../node_modules/zone.js/dist/zone.js",
         ts: "../node_modules/plugin-typescript/lib/plugin.js",
