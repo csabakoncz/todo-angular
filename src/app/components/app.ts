@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {AppStoreService, AppAction} from './app-store.service'
+import {AppStoreService} from '../services/index'
+import { Actions } from '../actions/index';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,6 @@ export class AppComponent {
   _title = 'angular-ride';
 
   constructor(private storeStore: AppStoreService){
-    console.log('appStore = ', storeStore)
 
     this.updateTitle()
 
@@ -33,6 +33,6 @@ export class AppComponent {
   }
 
   clicked(){
-    this.storeStore.store.dispatch({type: AppAction.TITLE_CLICK})
+    this.storeStore.store.dispatch({type: Actions.titleClick()})
   }
 }

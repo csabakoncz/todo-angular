@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { AppStoreService , AppAction} from './app-store.service';
+import { Component } from '@angular/core';
+import { AppStoreService } from '../services/index';
+import { Actions } from '../actions/index';
+
 
 @Component({
   selector: 'AddTodo',
@@ -12,21 +13,16 @@ import { AppStoreService , AppAction} from './app-store.service';
   `,
   styles: []
 })
-export class AddTodoComponent implements OnInit {
+export class AddTodoComponent {
   todoText: string;
 
   constructor(private appStoreService: AppStoreService){
   }
 
-  ngOnInit() {
-  }
-
-  submit(data){
-    console.log('creating Todo with data', data)
+  submit(){
 
     this.appStoreService.store.dispatch({
-      type: AppAction.ADD_TODO,
-      text: this.todoText
+      type: Actions.addTodo(this.todoText)
     })
 
     this.todoText = ''

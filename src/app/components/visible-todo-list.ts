@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AppStoreService } from './app-store.service';
-import { Todo } from './app-state';
+import { AppStoreService } from '../services/index';
+import { Todo } from '../model/index';
 
 @Component({
   selector: 'VisibleTodoList',
