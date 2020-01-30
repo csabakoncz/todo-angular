@@ -1,13 +1,21 @@
 import { Injectable } from '@angular/core';
-import {Store, createStore} from 'redux'
+import {Store, createStore, applyMiddleware} from 'redux'
 import { AppState } from '../model/index';
 import { appReducer } from '../reducers/index';
+import { INITIAL_STATE } from './initial-state';
+import {createLogger} from 'redux-logger'
+import thunkMiddleware from 'redux-thunk'
 
+const logger = createLogger()
 
 @Injectable()
 export class AppStoreService {
   store: Store<AppState>
   constructor() {
-    this.store = createStore(appReducer)
+    this.store = createStore(
+      appReducer,
+      INITIAL_STATE,
+      applyMiddleware(logger, thunkMiddleware)
+    )
   }
 }

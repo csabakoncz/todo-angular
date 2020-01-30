@@ -29,6 +29,8 @@ System.config({
 
     // other libraries
     "redux":                     "npm:redux@4.0.5/dist/redux.js",
+    "redux-logger":              "npm:redux-logger@3.0.6/dist/redux-logger.js",
+    "redux-thunk":               "npm:redux-thunk@2.3.0/es/index.js",
     'rxjs':                      'npm:rxjs@6.2.1',
     'rxjs-compat':               'npm:rxjs-compat@6.2.1',
     'ts':                        'npm:plugin-typescript@8.0.0/lib/plugin.js',

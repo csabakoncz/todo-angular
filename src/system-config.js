@@ -55,6 +55,8 @@ window._systemConfig = {
         "@angular/common": "../node_modules/@angular/common/esm2015",
         "@angular/forms": "../node_modules/@angular/forms/esm2015",
         "redux": "../node_modules/redux/dist/redux.js",
+        "redux-logger": "../node_modules/redux-logger/dist/redux-logger.js",
+        "redux-thunk": "../node_modules/redux-thunk/es/index.js",
         "rxjs": "../node_modules/rxjs/_esm2015",
         "symbol-observable": "../node_modules/symbol-observable/lib/index.js",
         "zone": "../node_modules/zone.js/dist/zone.js",

@@ -1,9 +1,8 @@
-import {INITIAL_STATE} from './initial-state'
 import {AppState} from '../model/index'
 import {Action} from 'redux'
 import { IAction, ActionTarget } from '../actions/index'
 
-export const appReducer = function(state: AppState=INITIAL_STATE, action: Action<IAction<any>>){
+export const appReducer = function(state: AppState, action: Action<IAction<any>>){
   const appAction = action.type;
 
   if (appAction.target==ActionTarget.AppState){
