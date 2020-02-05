@@ -6,7 +6,7 @@ import { Actions } from '../actions/index';
 @Component({
   selector: 'Todo',
   template: `
-    <p [ngClass]="{'completed-todo':todo.completed}" (click)="clicked()">
+    <p [ngClass]="{'completed-todo':todo.completed, 'blink': todo.blinks}" (click)="clicked()">
        {{todo.text}}
     </p>
   `,
@@ -20,6 +20,6 @@ export class TodoComponent {
   }
 
   clicked(){
-    this.appStoreService.store.dispatch({type:Actions.toggleTodo(this.todo)})
+    this.appStoreService.store.dispatch(Actions.toggleTodoAnimated(this.todo))
   }
 }

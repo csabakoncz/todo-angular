@@ -21,9 +21,7 @@ export class AddTodoComponent {
 
   submit(){
 
-    this.appStoreService.store.dispatch({
-      type: Actions.addTodo(this.todoText)
-    })
+    this.appStoreService.store.dispatch(Actions.addTodo(this.todoText))
 
     this.todoText = ''
   }

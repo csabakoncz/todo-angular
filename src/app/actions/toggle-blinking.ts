@@ -2,7 +2,7 @@ import { Todo } from '../model/index';
 import { IAction } from './iaction';
 import { ActionTarget } from './action-target';
 
-export class ToggleTodo implements IAction<Todo>{
+export class ToggleBlinking implements IAction<Todo>{
   target = ActionTarget.Todo
 
   constructor(private todo: Todo){
@@ -14,7 +14,7 @@ export class ToggleTodo implements IAction<Todo>{
     }
     return {
       ...oldTodo,
-      completed: !oldTodo.completed
+      blinks: !oldTodo.blinks
     }
   }
 }

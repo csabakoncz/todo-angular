@@ -1,6 +1,7 @@
 import { AppState } from '../model/index';
 import { IAction } from './iaction';
 import { ActionTarget } from './action-target';
+import { TodoImpl } from '../model/todo';
 
 export class AddTodo implements IAction<AppState>{
   target = ActionTarget.AppState
@@ -11,10 +12,9 @@ export class AddTodo implements IAction<AppState>{
   transform(state: AppState): AppState {
     return {
       ...state,
-      todos:[{
-        text: this.text,
-        completed: false
-      }].concat(state.todos)
+      todos:[
+        new TodoImpl(this.text)
+      ].concat(state.todos)
     }
   }
 }

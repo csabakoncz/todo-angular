@@ -33,6 +33,6 @@ export class AppComponent {
   }
 
   clicked(){
-    this.storeStore.store.dispatch({type: Actions.titleClick()})
+    this.storeStore.store.dispatch(Actions.titleClick())
   }
 }
