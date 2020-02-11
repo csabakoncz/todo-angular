@@ -38,6 +38,10 @@ window._systemConfig = {
             'defaultExtension': 'js',
             'main': 'forms'
         },
+        '@angular/router': {
+            'defaultExtension': 'js',
+            'main': 'router'
+        },
         rxjs: {
             main: 'index.js',
             defaultExtension: 'js'
@@ -54,6 +58,7 @@ window._systemConfig = {
         "@angular/core": "../node_modules/@angular/core/esm2015",
         "@angular/common": "../node_modules/@angular/common/esm2015",
         "@angular/forms": "../node_modules/@angular/forms/esm2015",
+        "@angular/router": "../node_modules/@angular/router/esm2015",
         "redux": "../node_modules/redux/dist/redux.js",
         "redux-logger": "../node_modules/redux-logger/dist/redux-logger.js",
         "redux-thunk": "../node_modules/redux-thunk/es/index.js",

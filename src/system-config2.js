@@ -24,6 +24,7 @@ System.config({
     '@angular/http': 'npm:@angular/http'+angularVersion+'/bundles/http.umd.js',
     '@angular/router': 'npm:@angular/router'+angularVersion+'/bundles/router.umd.js',
     '@angular/forms': 'npm:@angular/forms'+angularVersion+'/bundles/forms.umd.js',
+    '@angular/router': 'npm:@angular/router'+angularVersion+'/bundles/router.umd.js',
     '@angular/upgrade': 'npm:@angular/upgrade'+angularVersion+'/bundles/upgrade.umd.js',
     '@angular/upgrade/static': 'npm:@angular/upgrade'+angularVersion+'/bundles/upgrade-static.umd.js',
 
