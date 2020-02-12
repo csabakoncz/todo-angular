@@ -5,6 +5,7 @@ import { ComponentsModule, AppComponent } from './components/index';
 import {AppStoreService} from './services/index';
 
 declare const SystemJS: any
+declare const __moduleName: any
 
 const routes: Routes=[
   {
@@ -12,8 +13,8 @@ const routes: Routes=[
     loadChildren: () => {
       var mp
       if(window['SystemJS']){
-        //TODO: learn to make relative imports with SystemJS
-        mp=SystemJS.import('app/components/subfooter.module')
+        // https://github.com/systemjs/systemjs/blob/0.21/docs/system-api.md#systemjsimportmodulename--normalizedparentname---promisemodule
+        mp=SystemJS.import('./components/subfooter.module',__moduleName)
       }
       else{
         mp = import('./components/subfooter.module')
