@@ -1,5 +1,6 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 @Component({
   selector: 'Subfooter',
@@ -19,7 +20,17 @@ class SubfooterComponent implements OnInit {
 
 }
 
+const routes: Routes = [
+  {
+    path: '',
+    component: SubfooterComponent
+  }
+]
+
+
 @NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
   declarations: [
     SubfooterComponent,
   ]
