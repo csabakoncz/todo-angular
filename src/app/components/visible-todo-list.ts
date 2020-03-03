@@ -6,7 +6,7 @@ import { Todo } from '../model/index';
   selector: 'VisibleTodoList',
   template: `
     <ul>
-      <Todo *ngFor="let todo of visibleTodos" [todo]="todo"></Todo>
+      <Todo *ngFor="let todo of visibleTodos; trackBy: trackByFn" [todo]="todo"></Todo>
     </ul>
   `,
   styles: []
@@ -35,6 +35,10 @@ export class VisibleTodoListComponent implements OnInit {
       $('todo').each((i,f)=>{f.children[0].style['border']='dotted'})
     }
     setTimeout(setBorder, 3000)
+  }
+
+  trackByFn(index: number, todo: Todo){
+    return todo.id
   }
 
 }
